@@ -1,0 +1,47 @@
+header{
+background-color: red;
+width:100vw;
+height:100px;
+position:fixed;
+top:0px;
+left:0px;
+}
+
+nav{
+background-color: blue;
+width: 20vw;
+min-width:100px;
+height:calc(100vh - 100px);
+display: inline-block;
+float:right;
+overflow: auto;
+position:fixed;
+top:100px;
+right:0px;
+z-index:1;
+color:mintcream;
+}
+
+article{
+background-color: yellow;
+width:80vw;
+min-width:100px;
+height:500px;
+height:calc(100vh - 100px);
+overflow: auto;
+float:left;
+position:fixed;
+top:100px;
+left:0px;
+z-index: 0;
+}
+
+
+div{
+  box-sizing:border-box;
+}
+
+body,html,div{
+  margin: 0px;
+  padding:0px;
+}

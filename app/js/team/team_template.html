@@ -1,0 +1,20 @@
+<div class = "flex-container">
+<div ng-repeat= "unit in teammates">
+  <div unit-display unit = "unit" size = "medium" ng-class = "{selected:(selected == unit)}" ng-click="swapSelectedForIndex($index)"></div>
+</div ng-repeat>
+</div>
+<div unit-display unit = "selected" size = "large"></div>
+
+<select ng-model = "sortCriteria">
+  <option value = "-name">Name</option>
+  <option value = "-class">Class</option>
+  <option value = "hp">HP</option>
+  <option value = "speed">Speed</option>
+  <option value = "attack">Attack</option>
+  <option value = "defense">Defense</option>
+  <option value = "mAttack">M.Attack</option>
+  <option value = "mDefense">M.Defense</option>
+</select>
+<div ng-repeat= "unit in allUnits | orderBy:sortCriteria:true">
+<unit-display ng-click = "setSelected(unit)" unit = "unit" size = "small" ng-class = "{selected:(selected == unit)}" important-stat = "sortCriteria"></unit-display>
+</div ng-repeat>

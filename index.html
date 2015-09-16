@@ -1,0 +1,36 @@
+<html ng-app = "battleForSilvermyst">
+<head>
+  <title></title>
+<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+<link rel="stylesheet" type = "text/css" href = "styles/mainStyle.css">
+<link rel="stylesheet" type = "text/css" href = "styles/unitStyle.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+</head>
+<body>
+<header>
+
+</header>
+
+<article>
+<ng-view></ng-view>
+</article>
+
+<nav ng-controller = "navController">
+  <ul>
+    <li ng-click="routeTo('battle')">Battle</li>
+    <li ng-click="routeTo('units')">Units</li> 
+    <li ng-click="routeTo('team')">Team</li>
+    <li ng-click="routeTo('equip')">Equip</li>
+    <li ng-click="routeTo('inventory')">Inventory</li>
+  </ul>
+</nav>
+
+
+
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+<script src = "app/app.js"></script>
+<script src = "app/js/common/navController.js"></script>
+<script src = "app/js/team/teamController.js"></script>
+<script src = "app/js/units/unitDisplay.js"></script>
+</body>
+</html>
